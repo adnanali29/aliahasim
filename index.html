@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaliyah Meraj Hashmi | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for editorial headers, Inter for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#f5f7fa',
+                            100: '#eef2f6',
+                            200: '#e1e7ec',
+                            600: '#4a47a3', // Soft, clinical therapeutic violet-indigo
+                            750: '#363482',
+                            900: '#1b1a4c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom Keyframe Animations for elegant breathing feel */
+        @keyframes gentle-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        @keyframes gentle-float-delayed {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(-1deg); }
+        }
+        .animate-float {
+            animation: gentle-float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: gentle-float-delayed 7s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-2">
+                <span class="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-slate-900">Aaliya Hashmi</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#home" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition-colors">Home</a>
+                <a href="#about" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition-colors">About</a>
+                <a href="#expertise" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition-colors">Expertise</a>
+                <a href="#events" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition-colors">Events</a>
+                <a href="#gallery" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-clinical-600 transition-colors">Gallery</a>
+                <a href="#contact" class="px-5 py-2.5 bg-slate-900 hover:bg-slate-850 text-white rounded-full text-2xs font-bold uppercase tracking-widest transition-all shadow-sm">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-600 focus:outline-none" aria-label="Toggle Menu">
+                <i id="menuIcon" class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-6 absolute w-full left-0 shadow-lg flex flex-col space-y-4">
+            <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold uppercase tracking-wider text-slate-755 hover:text-clinical-600">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="text-sm font-semibold uppercase tracking-wider text-slate-755 hover:text-clinical-600">About</a>
+            <a href="#expertise" onclick="toggleMobileMenu()" class="text-sm font-semibold uppercase tracking-wider text-slate-755 hover:text-clinical-600">Expertise</a>
+            <a href="#events" onclick="toggleMobileMenu()" class="text-sm font-semibold uppercase tracking-wider text-slate-755 hover:text-clinical-600">Events</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="text-sm font-semibold uppercase tracking-wider text-slate-755 hover:text-clinical-600">Gallery</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-center py-3 bg-slate-900 text-white rounded-xl text-xs font-semibold tracking-wider uppercase">Contact</a>
+        </div>
+    </header>
+
+    <!-- HOME / HERO SECTION -->
+    <section id="home" class="relative min-h-[80vh] flex items-center pt-24 pb-12 lg:py-20 bg-gradient-to-b from-white via-indigo-50/10 to-slate-50">
+        
+        <!-- Elegant Backdrop Mesh Orbs -->
+        <div class="absolute top-[10%] right-[-10%] w-[450px] h-[450px] rounded-full bg-indigo-200/10 blur-3xl -z-10 animate-pulse" style="animation-duration: 9s;"></div>
+        <div class="absolute bottom-[10%] left-[-10%] w-[350px] h-[350px] rounded-full bg-purple-100/10 blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Profile summary block -->
+            <div class="lg:col-span-7 space-y-6 text-center flex flex-col items-center justify-center">
+                <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100/70 px-4 py-2 rounded-full text-clinical-600 text-xs font-semibold uppercase tracking-wider shadow-2xs">
+                    <span class="w-2 h-2 rounded-full bg-clinical-600 animate-ping"></span>
+                    Psychology & Mental Health Educator
+                </div>
+                
+                <div class="space-y-4">
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-normal text-slate-900 leading-[1.08] tracking-tight">
+                        Aaliyah <br>
+                        <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-clinical-600 via-clinical-750 to-indigo-800 font-serif font-normal">Meraj Hashmi</span>
+                    </h1>
+                    
+                    <p class="text-slate-500 text-xs sm:text-sm uppercase tracking-widest font-bold flex flex-wrap justify-center gap-x-3 gap-y-1">
+                        <span>M.A. Psychology</span>
+                        <span class="text-slate-300 hidden sm:inline">|</span>
+                        <span>Certified in Guidance</span>
+                        <span class="text-slate-300 hidden sm:inline">|</span>
+                        <span>Mental Health Advocate</span>
+                    </p>
+                </div>
+                
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light">
+                    Creating spaces where minds are heard, hearts are understood, and wellness is not a destination — but a way of living. I work at the intersection of psychology, counselling, and education to make mental health accessible, destigmatised, and deeply human.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                    <a href="#about" class="group px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 text-center shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <span>Discover My Work</span>
+                        <i class="fa-solid fa-arrow-right text-3xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 text-center hover:-translate-y-0.5">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Hero Image block (Highly Optimized with clean boundaries & padding to prevent clipping) -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center relative px-6 sm:px-12 py-6">
+                
+                <!-- Graphic element backdrop shadow-glow -->
+                <div class="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-clinical-100 to-indigo-50/50 -z-10 blur-xl opacity-70"></div>
+
+                <!-- Main Book Framing -->
+                <div class="relative w-full max-w-[320px] bg-white p-4.5 rounded-[2rem] border border-slate-150/70 shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                    <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology book portrait photo" class="rounded-[1.5rem] w-full h-auto object-cover shadow-inner" onerror="handleImageFallback(this, 'book')">
+                    
+                    <!-- Stats Badge 1: Minds Empowered (Floats on bottom right, with responsive layout-safe spacing) -->
+                    <div class="absolute -bottom-5 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] animate-float">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                            <p class="text-xl font-bold text-slate-900 leading-none font-serif">∞</p>
+                        </div>
+                        <p class="text-[9px] font-bold text-slate-500 uppercase tracking-wider mt-1">Minds Empowered</p>
+                    </div>
+
+                    <!-- Stats Badge 2: Research Papers (Floats on top left, safe-spaced) -->
+                    <div class="absolute -top-5 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] animate-float-delayed">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-scroll text-clinical-600 text-xs"></i>
+                            <p class="text-sm font-bold text-slate-900 leading-none">4 Papers</p>
+                        </div>
+                        <p class="text-[9px] font-bold text-slate-500 uppercase tracking-wider mt-1">Presented Globally</p>
+                    </div>
+                </div>
+                
+                <!-- Balanced Credential Labels below Book (Perfect alignment match with book container above) -->
+                <div class="grid grid-cols-2 gap-4 mt-10 w-full max-w-[320px]">
+                    <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 shadow-sm hover:bg-white transition-colors duration-300">
+                        <div class="flex items-center gap-2 text-clinical-600 mb-1">
+                            <i class="fa-solid fa-graduation-cap text-xs"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-800">M.A. Degree</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-relaxed font-light">Comprehensive postgraduate specialization in Psychology</p>
+                    </div>
+                    <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 shadow-sm hover:bg-white transition-colors duration-300">
+                        <div class="flex items-center gap-2 text-clinical-600 mb-1">
+                            <i class="fa-solid fa-chalkboard-user text-xs"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-800">Counsellor</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-relaxed font-light">Certified Guidance & active mental health lecturer</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: WHY IT MATTERS & PILARS OF WELL-BEING -->
+    <section class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 space-y-16">
+            
+            <!-- Essay Content 1 -->
+            <div class="space-y-6 text-center">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Why It Matters</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-normal">Mental Health & Well-being</h2>
+                <div class="w-12 h-0.5 bg-clinical-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="text-slate-655 space-y-6 text-base sm:text-lg leading-relaxed font-light">
+                <p>
+                    Mental health is not merely the absence of illness — it is the presence of vitality, resilience, purpose, and the capacity to navigate life with self-awareness and grace. In a world that increasingly demands more from us — more productivity, more performance, more perfection — the quiet inner landscape of our psychological well-being is often the first thing we sacrifice.
+                </p>
+                <p>
+                    Yet this sacrifice carries a profound cost. When mental health is neglected, it quietly erodes the quality of every relationship, every decision, and every experience we have. Anxiety tightens around possibilities. Depression dims the colours of ordinary joy. Unprocessed stress calcifies into physical illness. The mind and body are not separate systems — they are one, constantly in conversation with each other.
+                </p>
+                <p>
+                    Understanding mental health means understanding the human condition itself. It means recognising that emotional pain is not weakness. It means acknowledging that seeking support is not failure — it is perhaps the most courageous act a person can take. It means creating a world where vulnerability is honoured, not hidden.
+                </p>
+
+                <div class="p-8 bg-slate-50 border-l-4 border-clinical-600 rounded-r-2xl my-8">
+                    <p class="italic font-serif text-slate-800 text-lg">
+                        "Mental wellness is not a luxury for the privileged few — it is a fundamental human right, and it is the foundation upon which everything else in life is built."
+                    </p>
+                </div>
+
+                <p>
+                    For communities in India — where mental health carries the weight of stigma, cultural silence, and generational trauma — this conversation is especially urgent. We are a society that has long equated emotional expression with weakness. My work is dedicated to dismantling that narrative, one conversation, one session, one classroom at a time.
+                </p>
+            </div>
+
+            <!-- The Four Pillars Grid -->
+            <div class="pt-8 space-y-8">
+                <h3 class="font-serif text-2xl text-slate-900 text-center">The Four Pillars of Well-being</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-850 text-sm uppercase tracking-wider mb-2">1. Emotional Awareness</h4>
+                        <p class="text-xs text-slate-550 leading-relaxed">The ability to identify, understand, and express emotions without judgement — the bedrock of psychological resilience.</p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-850 text-sm uppercase tracking-wider mb-2">2. Cognitive Clarity</h4>
+                        <p class="text-xs text-slate-550 leading-relaxed">Breaking patterns of negative self-talk, cognitive distortions, and limiting beliefs that hold us back from our potential.</p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-850 text-sm uppercase tracking-wider mb-2">3. Relational Health</h4>
+                        <p class="text-xs text-slate-550 leading-relaxed">Building safe, boundaried, and nourishing relationships with others — and most importantly, with oneself.</p>
+                    </div>
+                    <!-- Pillar 4 -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-850 text-sm uppercase tracking-wider mb-2">4. Purposeful Living</h4>
+                        <p class="text-xs text-slate-550 leading-relaxed">Aligning one's daily life with values, goals, and a sense of meaning that sustains motivation and inner peace.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION: MY STORY -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left Side: Interactive Experience Card and Book Cover -->
+            <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">My Story</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 leading-snug">A Journey Into Understanding</h2>
+                
+                <div class="p-6 bg-white rounded-2xl border border-slate-150 space-y-4 shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-clinical-600 text-lg">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Years of Practice</h4>
+                            <p class="text-2xs text-slate-500">3+ Years of Active Service</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        Guiding clinical sessions, facilitating public health initiatives, lecturing, and leading therapeutic support groups with communities and academic platforms in India.
+                    </p>
+                </div>
+
+                <!-- Textbook Reference Box -->
+                <div class="p-6 bg-white rounded-2xl border border-slate-150 space-y-3 shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 text-lg">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Health Psychology</h4>
+                            <p class="text-2xs text-slate-500">Kalyani Publishers Textbook</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed font-light">
+                        Co-authored standard syllabus textbook strictly mapped under the National Education Policy (NEP - 2020 Model Syllabus) for psychology students.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Elaborate Essay & Timeline -->
+            <div class="lg:col-span-7 space-y-8 text-slate-655 text-base leading-relaxed font-light">
+                <p>
+                    I am Aaliyah Meraj Hashmi — a psychology lecturer, mental health educator, and certified guidance counsellor with a deep-rooted belief that every human being deserves to understand their own mind. My journey into psychology was not simply an academic pursuit; it was, and continues to be, a calling — a desire to bridge the profound gap between what people feel inside and what the world allows them to express.
+                </p>
+                <p>
+                    I hold a Master's degree in Psychology, which gave me the theoretical and scientific grounding to understand human behaviour in all its complexity — from developmental psychology and personality theories to clinical assessment and abnormal psychology. But it was the Certified Course in Guidance that transformed my practice from knowledge into craft, equipping me with the practical tools to truly walk alongside another person through their inner world.
+                </p>
+                <p>
+                    During my postgraduate years, I was fortunate to engage deeply with academic research — presenting three papers at State-level conferences and one at an International conference. Each paper was not just an academic exercise; it was a chance to contribute meaningfully to the growing discourse on mental health, counselling practices, and psychological well-being in the Indian context. These experiences shaped my understanding that psychological knowledge must not remain locked in journals — it must reach classrooms, communities, and conversations.
+                </p>
+                <p>
+                    My clinical internship at the SCB Medical College, Department of Mental Health, was a formative and humbling experience. Surrounded by individuals who were navigating the most vulnerable chapters of their lives, I learned that the most powerful intervention a psychologist can offer is sometimes simply the act of truly listening — without agenda, without judgment, with complete presence. That internship became the compass for everything I do today.
+                </p>
+                <p>
+                    Today, I serve as a Psychology Lecturer and Mental Health Educator, committed to making psychological literacy part of everyday life — not just in hospitals and clinics, but in schools, workplaces, families, and communities.
+                </p>
+
+                <!-- Academic & Professional Journey Timeline -->
+                <div class="pt-8 border-t border-slate-200">
+                    <h3 class="font-serif text-xl text-slate-900 mb-6">Academic & Professional Journey</h3>
+                    
+                    <div class="relative pl-6 border-l-2 border-slate-100 space-y-8 text-xs">
+                        
+                        <!-- M.A. -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-clinical-600"></div>
+                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">M.A. — Master of Arts in Psychology</h4>
+                            <p class="text-slate-500 mt-1 leading-relaxed">
+                                Comprehensive postgraduate studies covering clinical, developmental, social, and organisational psychology. Developed strong foundations in psychological assessment, counselling methodology, and research design.
+                            </p>
+                        </div>
+
+                        <!-- Cert. -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-clinical-600"></div>
+                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">Cert. — Certified Course in Guidance</h4>
+                            <p class="text-slate-550 mt-1 leading-relaxed">
+                                Specialised professional certification focusing on guidance counselling frameworks, student support systems, career guidance methodologies, and practical counselling skills for diverse populations.
+                            </p>
+                        </div>
+
+                        <!-- Intern -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-clinical-600"></div>
+                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">Intern — Clinical Internship (SCB Medical College)</h4>
+                            <p class="text-slate-500 mt-1 leading-relaxed">
+                                Worked within a structured psychiatric and psychological setting. Gained exposure to diverse clinical presentations, multidisciplinary team collaboration, patient assessment, and therapeutic support under qualified supervision.
+                            </p>
+                        </div>
+
+                        <!-- 2026 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-indigo-500"></div>
+                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">May 2026 — Community Session with NGO Envoy</h4>
+                            <p class="text-slate-500 mt-1 leading-relaxed">
+                                Facilitated an enriching community session on the occasion of Mother's Day, exploring the intersection of motherhood and mental health. This session created a safe space for mothers to discuss emotional fatigue, identity shifts, and self-care.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Areas of Practice</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-normal mt-2">My Expertise</h2>
+                <p class="text-slate-500 mt-3 text-sm font-light">
+                    My practice spans six interconnected domains of psychological support — each grounded in evidence-based methodology and delivered with compassion, cultural sensitivity, and a deep respect for individual experience.
+                </p>
+            </div>
+
+            <!-- Expertise Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 01 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">01</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Mental Health Counselling</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Providing a grounded, empathetic space for individuals navigating anxiety, depression, stress, grief, trauma, and emotional dysregulation. Drawing on cognitive-behavioural, humanistic, and integrative approaches to support lasting psychological change. Every individual brings a unique story — and every session begins with deep listening.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">02</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Career Counselling</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Helping students, young professionals, and career-changers navigate the complex terrain of occupational identity and purpose. Through psychometric assessments, values clarification, and structured guidance conversations, I support individuals in making career decisions that align with their strengths, interests, and long-term vision — not just societal expectations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">03</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Student Counselling</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Academic pressure, examination anxiety, identity formation, peer relationships, and the transition from adolescence to adulthood — these are not trivial concerns. They are the defining experiences of a young person's life. I work with students to build psychological resilience, develop self-regulation strategies, and foster a healthy relationship with learning, failure, and success.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">04</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Lifestyle Counselling</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Our habits, routines, relationships, and daily rhythms are not separate from our mental health — they are its architecture. I work with individuals to examine and reshape the lifestyle patterns that contribute to emotional distress, offering practical, psychologically-informed guidance on sleep, boundaries, digital well-being, relationships, and daily self-care that is sustainable and deeply personal.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-105 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">05</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Stress Management</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Chronic stress is one of the defining health challenges of the modern era — yet most people have never been taught how to manage it effectively. My stress management work goes beyond surface-level tips, addressing the cognitive patterns, physiological responses, and behavioural cycles that sustain stress, and equipping individuals with evidence-based tools to restore equilibrium and inner calm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-clinical-600 tracking-wider">06</p>
+                        <h3 class="font-serif text-lg font-bold text-slate-850 mt-4 mb-2">Corporate Well-being</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Workplaces are psychological environments. The culture, communication patterns, leadership styles, and workload norms of an organisation directly shape the mental health of everyone within it. I partner with corporate teams and organisations to deliver well-being workshops, burnout prevention programmes, team resilience sessions, and mental health awareness training that transforms workplace culture from the inside out.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Milestones</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-normal mt-2">Events & Presentations</h2>
+            </div>
+
+            <!-- Milestones Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- State 1 -->
+                <div class="p-8 bg-white rounded-2xl border border-slate-150 flex flex-col justify-between shadow-xs">
+                    <div class="space-y-4">
+                        <span class="bg-indigo-50 text-clinical-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">State Level</span>
+                        <h3 class="font-serif text-lg font-bold text-slate-850">Research Paper Presentation — State Conference I</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            Presented original psychological research at a State-level academic conference, contributing to scholarly discourse on mental health and counselling. This presentation represented months of rigorous research, data analysis, and the translation of academic findings into actionable insights for practitioners and educators in the field.
+                        </p>
+                    </div>
+                    <p class="text-[10px] font-semibold text-slate-400 mt-6 uppercase tracking-wider">State Level Conference &middot; Psychology & Counselling</p>
+                </div>
+
+                <!-- State 2 -->
+                <div class="p-8 bg-white rounded-2xl border border-slate-150 flex flex-col justify-between shadow-xs">
+                    <div class="space-y-4">
+                        <span class="bg-indigo-50 text-clinical-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">State Level</span>
+                        <h3 class="font-serif text-lg font-bold text-slate-850">Research Paper Presentation — State Conference II</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            A second State-level presentation showcasing continued engagement with cutting-edge psychological research. Each conference was an opportunity not only to share knowledge but to engage with peers, mentors, and professionals from across the field — refining the research lens and deepening commitment to evidence-based practice.
+                        </p>
+                    </div>
+                    <p class="text-[10px] font-semibold text-slate-400 mt-6 uppercase tracking-wider">State Level Conference &middot; Psychology & Education</p>
+                </div>
+
+                <!-- State 3 -->
+                <div class="p-8 bg-white rounded-2xl border border-slate-150 flex flex-col justify-between shadow-xs">
+                    <div class="space-y-4">
+                        <span class="bg-indigo-50 text-clinical-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">State Level</span>
+                        <h3 class="font-serif text-lg font-bold text-slate-850">Research Paper Presentation — State Conference III</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            The third State-level paper presentation cemented a strong research presence within the academic psychology community. This work demonstrated the breadth of inquiry — spanning clinical psychology, guidance practices, or applied mental health — and the ability to communicate complex psychological concepts with clarity and purpose to a professional audience.
+                        </p>
+                    </div>
+                    <p class="text-[10px] font-semibold text-slate-400 mt-6 uppercase tracking-wider">State Level Conference &middot; Applied Psychology</p>
+                </div>
+
+                <!-- International -->
+                <div class="p-8 bg-white rounded-2xl border border-slate-150 flex flex-col justify-between shadow-xs">
+                    <div class="space-y-4">
+                        <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">International</span>
+                        <h3 class="font-serif text-lg font-bold text-slate-850">International Conference Paper Presentation</h3>
+                        <p class="text-xs text-slate-550 leading-relaxed font-light">
+                            A landmark achievement — presenting psychological research on an international platform, engaging with scholars, practitioners, and researchers from around the world. This experience broadened the global perspective of practice and reinforced the universal nature of mental health challenges while celebrating the cultural nuances that shape psychological experience across societies.
+                        </p>
+                    </div>
+                    <p class="text-[10px] font-semibold text-slate-400 mt-6 uppercase tracking-wider">International Conference &middot; Global Psychology</p>
+                </div>
+
+            </div>
+
+            <!-- Community Event Banner (NGO Envoy Mother's Day Session) -->
+            <div class="mt-8 bg-white p-8 rounded-2xl border border-slate-150 shadow-xs space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Community Event</span>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">May 2026 &middot; NGO Envoy &middot; Community Mental Health Outreach</span>
+                </div>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-850">Mother's Day Mental Health Session — NGO Envoy</h3>
+                <div class="text-slate-600 text-xs sm:text-sm leading-relaxed space-y-4 font-light">
+                    <p>
+                        On the occasion of Mother's Day, I facilitated a deeply meaningful and widely appreciated community session in collaboration with NGO Envoy — a gathering that brought together mothers from diverse backgrounds to explore the rarely-discussed intersection of motherhood and mental health.
+                    </p>
+                    <p>
+                        The session created a warm, non-judgmental space for mothers to speak honestly about the emotional weight of caregiving — the invisible labour, the identity shifts that often accompany motherhood, the pressure to be endlessly available, and the quiet sacrifice of one's own psychological needs. Through guided conversation, reflective exercises, and shared storytelling, participants were reminded that caring for themselves is not a luxury — it is a necessity, and a gift they give to their families.
+                    </p>
+                    <p class="font-medium text-slate-800">
+                        The session was met with profound engagement and emotional resonance, reinforcing the importance of community-based mental health outreach and the power of simply being heard.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Moments & Memories</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-normal mt-2">In Pictures</h2>
+                <p class="text-slate-500 mt-3 text-xs sm:text-sm font-light">
+                    A glimpse into the sessions, conferences, and community spaces where conversations about mental health come alive. Each photograph is a moment of connection, learning, and purposeful action.
+                </p>
+            </div>
+
+            <!-- Balanced layout: Video Left Panel, Clean image grid on the right -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Video Section (Large Column Left) -->
+                <div class="lg:col-span-4 bg-slate-50 rounded-2xl border border-slate-150 p-5 space-y-4 shadow-sm">
+                    <span class="bg-indigo-50 text-clinical-600 text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase inline-block">Watch Mother's Day Session</span>
+                    <h4 class="font-serif text-lg font-semibold text-slate-900 leading-snug">Community Mental Health Circle</h4>
+                    
+                    <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-black flex items-center justify-center max-h-[460px] shadow-sm">
+                        <video id="portfolioVideo" controls class="w-full h-full object-cover">
+                            <source src="VIDEO-2026-05-23-09-39-21.mp4" type="video/mp4">
+                            Your browser does not support video play.
+                        </video>
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded flex items-center gap-1.5 shadow-sm">
+                            <span class="w-1 h-1 rounded-full bg-white animate-ping"></span> Live Session Video
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-slate-550 leading-relaxed font-light mt-4">
+                        Watch the recorded session from the Mother's Day mental health event with NGO Envoy — a heartfelt, community-driven conversation on the emotional realities of motherhood, the weight of invisible labour, and how mothers can reclaim space for their own psychological well-being.
+                    </p>
+                </div>
+
+                <!-- Clean, aspect locked images on the right with NO text card wrappers -->
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- Portrait / Speaking Photo (Photo 1) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-43-30.jpg', 'Academic Portrait: Publishing standard Health Psychology guidelines supporting National Education Policy frameworks.')">
+                        <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'book')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Conference / Paper Presentation (Photo 2) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-37-21.jpg', 'Academic Encouragement: Presenting empirical psychology frameworks and career-guidance tools to adolescent participants.')">
+                        <img src="PHOTO-2026-05-23-09-37-21.jpg" alt="Academic Conference Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'adolescent')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- NGO Envoy Session (Photo 3) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-42-45.jpg', 'NGO Envoy Session: Awarding micro-financial and recognition envelopes to community mother-daughter pairs under Project Umeed.')">
+                        <img src="PHOTO-2026-05-23-09-42-45.jpg" alt="NGO Envoy Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'session')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- SCB Internship / Clinical Work (Photo 4) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-42-47.jpg', 'Biopsychosocial Care: Direct supplement distribution to local grandmothers to support physical and emotional stability.')">
+                        <img src="PHOTO-2026-05-23-09-42-47.jpg" alt="SCB Internship / Clinical Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'elderly')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Workshop / Class Photo (Photo 5) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-42-46.jpg', 'Youth Guidance Distribution: Offering psychological validating resources and career guidance pathways directly to adolescent daughters.')">
+                        <img src="PHOTO-2026-05-23-09-42-46.jpg" alt="Youth Guidance Distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'adolescent')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Solidarity Portrait (Photo 6) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-37-22.jpg', 'Project Umeed Team Portrait: Facilitating group solidarity along with Envoy NGO administrators and grant recipients.')">
+                        <img src="PHOTO-2026-05-23-09-37-22.jpg" alt="Support Group Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'group')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Supplementary Elder Distribution Photo (Photo 7) -->
+                    <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
+                         onclick="openLightbox('PHOTO-2026-05-23-09-42-46 2.jpg', 'Nutritional Support Drive: Facilitating elder supplement drives with NGO Envoy to lower physiological strains.')">
+                        <!-- URL encoded strictly for space handling in file names -->
+                        <img src="PHOTO-2026-05-23-09-42-46%202.jpg" alt="Nutrition Aid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'elderly')">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: CORE PHILOSOPHY & PRACTICE -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6 space-y-12">
+            
+            <!-- Headline block -->
+            <div class="space-y-4 text-center">
+                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">My Approach</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-normal">Philosophy & Practice</h2>
+                <div class="w-12 h-0.5 bg-clinical-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="text-slate-655 space-y-6 text-sm sm:text-base leading-relaxed font-light">
+                <p>
+                    My practice is rooted in the belief that every person holds within them an innate capacity for healing, growth, and self-understanding — and my role is simply to help them access it.
+                </p>
+                <p>
+                    Every person who walks into a counselling space — whether it is a clinic, a classroom, a workshop, or a community hall — carries with them a lifetime of experience, shaped by relationships, culture, history, and the countless stories they have told themselves about who they are. My fundamental philosophy begins here: with deep, unconditional respect for the complexity of each individual's inner world.
+                </p>
+
+                <div class="space-y-6 pt-6">
+                    <div>
+                        <h4 class="font-serif text-base font-bold text-slate-850">An Integrative, Person-Centred Approach</h4>
+                        <p class="mt-1">
+                            I do not subscribe to a single therapeutic doctrine, because human beings are too rich and varied to be served by only one lens. My practice draws from the Cognitive-Behavioural tradition — examining how thoughts, feelings, and behaviours are interlinked and how changing one can transform the others. It is also deeply informed by Humanistic psychology, particularly Carl Rogers' person-centred approach, which places the therapeutic relationship itself at the heart of healing. I also incorporate psychoeducation — the belief that understanding the science of the mind is itself a therapeutic act, empowering individuals with knowledge about their own psychology.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-base font-bold text-slate-850">Cultural Sensitivity in Indian Contexts</h4>
+                        <p class="mt-1">
+                            Practising psychology in India means practising at the intersection of rich cultural heritage and significant social stigma. The notion that mental health concerns are signs of weakness, that emotional struggles should be kept within the family, that seeking professional support is shameful — these are not merely individual beliefs but deeply embedded cultural scripts. My work is acutely sensitive to these contexts. I meet people where they are, not where a Western psychological model might expect them to be. This means integrating cultural understanding, family dynamics, religious frameworks, and social realities into every interaction.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-base font-bold text-slate-850">Education as Prevention</h4>
+                        <p class="mt-1">
+                            As a Psychology Lecturer, I am deeply committed to the idea that education is the most powerful preventive mental health tool we have. When young people learn about emotional regulation, cognitive distortions, stress physiology, and the neuroscience of trauma — they gain a vocabulary for their inner lives. They learn that their experiences have names, that they are not alone, and that change is possible. The classroom, for me, is as much a site of healing as the counsellor's room.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-base font-bold text-slate-850">The Role of Community</h4>
+                        <p class="mt-1">
+                            Mental health is not solely an individual matter — it is a collective one. The environments we inhabit, the relationships we maintain, and the communities that surround us are the living infrastructure of our psychological well-being. My community outreach work, such as the Mother's Day session with NGO Envoy, reflects my conviction that the most transformative mental health work often happens not in clinical settings but in the warm, shared spaces of community life — where people recognise themselves in each other's stories and realise they are not alone in their struggles.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX PREVIEW MODAL -->
+    <div id="lightbox" class="fixed inset-0 bg-slate-950/95 backdrop-blur-xs z-50 hidden flex-col items-center justify-center p-4">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-slate-300 text-3xl focus:outline-none transition-all">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Large Preview Image Frame -->
+        <div class="max-w-4xl max-h-[75vh] flex items-center justify-center">
+            <img id="lightboxImg" src="" alt="Expanded portfolio picture" class="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl">
+        </div>
+        <!-- Caption Context -->
+        <p id="lightboxCaption" class="text-slate-200 mt-4 text-xs sm:text-sm text-center max-w-2xl px-6 font-light leading-relaxed"></p>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                
+                <!-- Contact Info Details (Left Column) -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div class="space-y-6">
+                        <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Connect</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900">Get in Touch</h2>
+                        <p class="text-slate-550 text-sm leading-relaxed font-light">
+                            Whether you are an individual seeking support, an organisation looking to bring mental health education to your team, an academic institution interested in collaboration, or a community group hoping to host a session — I would love to hear from you. Every conversation about mental health is a step towards a more compassionate world.
+                        </p>
+                        
+                        <div class="space-y-4 pt-4">
+                            <!-- Direct Email -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-clinical-600">
+                                    <i class="fa-regular fa-envelope text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wide">Email</p>
+                                    <a href="mailto:aaliyahnik1998@gmail.com" class="text-xs font-semibold text-slate-800 hover:text-clinical-600 transition-colors">aaliyahnik1998@gmail.com</a>
+                                </div>
+                            </div>
+                            <!-- Direct Phone -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-clinical-600">
+                                    <i class="fa-solid fa-phone text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wide">Phone</p>
+                                    <a href="tel:+917749905576" class="text-xs font-semibold text-slate-800 hover:text-clinical-600 transition-colors">+91 77499 05576</a>
+                                </div>
+                            </div>
+                            <!-- Location Information -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-clinical-600">
+                                    <i class="fa-solid fa-location-dot text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wide">Location</p>
+                                    <span class="text-xs font-semibold text-slate-800">India &middot; Available for Online & In-Person Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cleaned Up & Simplified Social Icons Container -->
+                    <div class="pt-6 border-t border-slate-200/65">
+                        <div class="flex gap-3">
+                            <a href="#" class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm hover:bg-clinical-600 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm hover:bg-clinical-600 transition-colors"><i class="fa-solid fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Right Column) -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-150 shadow-sm">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <h4 class="font-serif text-lg font-semibold text-slate-900 border-b border-slate-100 pb-3">Send a Message</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex flex-col space-y-1">
+                                <label for="firstName" class="text-3xs font-bold text-slate-500 uppercase">First Name</label>
+                                <input type="text" id="firstName" required class="px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-1 focus:ring-clinical-600 focus:outline-none text-xs transition-all" placeholder="Enter first name">
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <label for="lastName" class="text-3xs font-bold text-slate-500 uppercase">Last Name</label>
+                                <input type="text" id="lastName" required class="px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-1 focus:ring-clinical-600 focus:outline-none text-xs transition-all" placeholder="Enter last name">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col space-y-1">
+                            <label for="email" class="text-3xs font-bold text-slate-500 uppercase">Email Address</label>
+                            <input type="email" id="email" required class="px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-1 focus:ring-clinical-600 focus:outline-none text-xs transition-all" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="flex flex-col space-y-1">
+                            <label for="reason" class="text-3xs font-bold text-slate-500 uppercase">Purpose of Enquiry</label>
+                            <select id="reason" class="px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-1 focus:ring-clinical-600 focus:outline-none text-xs bg-white">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="counselling">Personal Counselling / Mental Health Support</option>
+                                <option value="career">Career or Student Counselling</option>
+                                <option value="stress">Stress Management Programme</option>
+                                <option value="corporate">Corporate Well-being Workshop</option>
+                                <option value="community">Community Session / NGO Collaboration</option>
+                                <option value="speaking">Speaking Engagement / Lecture</option>
+                                <option value="academic">Academic Collaboration / Research</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col space-y-1">
+                            <label for="message" class="text-3xs font-bold text-slate-500 uppercase">Your Message</label>
+                            <textarea id="message" rows="4" required class="px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-1 focus:ring-clinical-600 focus:outline-none text-xs transition-all" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase shadow-sm transition-all flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-3xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SUCCESS SYSTEM (CLEAN REPLACEMENT FOR BROWSER ALERTS) -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/30 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+        <div class="bg-white max-w-sm w-full rounded-2xl p-6 border border-slate-100 shadow-2xl text-center space-y-4">
+            <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-500 mx-auto flex items-center justify-center text-xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <h3 class="font-serif text-lg font-bold text-slate-900">Message Sent Successfully</h3>
+                <p class="text-2xs text-slate-500 mt-1">
+                    Thank you. Aaliyah Hashmi has received your submission. I will reach out and connect with you within 24-48 business hours.
+                </p>
+            </div>
+            <button onclick="closeSuccessModal()" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-lg transition-colors">
+                Back
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-8 items-center text-center sm:text-left">
+            <div>
+                <p class="font-serif text-lg font-semibold text-white">Aaliyah Meraj Hashmi</p>
+                <p class="text-[11px] mt-1 tracking-wider uppercase text-slate-500">M.A. Psychology &nbsp;|&nbsp; Certified in Guidance &nbsp;|&nbsp; Mental Health Educator</p>
+                <p class="text-xs text-slate-600 mt-3 flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-1">
+                    <a href="mailto:aaliyahnik1998@gmail.com" class="hover:text-white transition-colors"><i class="fa-regular fa-envelope mr-1.5"></i>aaliyahnik1998@gmail.com</a>
+                    <a href="tel:+917749905576" class="hover:text-white transition-colors"><i class="fa-solid fa-phone mr-1.5"></i>+91 77499 05576</a>
+                </p>
+            </div>
+            <div class="sm:text-right">
+                <p class="text-xs text-slate-600">
+                    &copy; 2026 Aaliyah Meraj Hashmi. All rights reserved.
+                </p>
+                <p class="text-[10px] text-slate-700 mt-1">
+                    Crafting compassionate therapeutic pathways across India.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTING -->
+    <script>
+        // Custom fallbacks for images if files aren't in path
+        function handleImageFallback(element, theme) {
+            const fallbackThemes = {
+                book: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80", 
+                session: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80", 
+                elderly: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80", 
+                adolescent: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80", 
+                group: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80" 
+            };
+            element.onerror = null; 
+            element.src = fallbackThemes[theme] || "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80";
+        }
+
+        // Handle mobile navigation Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fa-solid fa-xmark text-lg';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars text-lg';
+            }
+        }
+
+        // Handle Lightbox preview system
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+            
+            img.src = src;
+            cap.textContent = caption;
+            
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = ''; 
+        }
+
+        // Form Submit Action Handler (Modal display)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('contactForm').reset();
+        }
+
+        // Success Close
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
