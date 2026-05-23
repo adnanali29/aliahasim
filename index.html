@@ -40,22 +40,6 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        /* Custom Keyframe Animations for elegant breathing feel */
-        @keyframes gentle-float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(1deg); }
-        }
-        @keyframes gentle-float-delayed {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(-1deg); }
-        }
-        .animate-float {
-            animation: gentle-float 6s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-            animation: gentle-float-delayed 7s ease-in-out infinite;
-            animation-delay: 2s;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-100 selection:text-indigo-900">
@@ -140,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Right Hero Image block (Highly Optimized with clean boundaries & padding to prevent clipping) -->
+            <!-- Right Hero Image block (Prinstine, clean photo with absolutely no overlaid texts or badges) -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center relative px-6 sm:px-12 py-6">
                 
                 <!-- Graphic element backdrop shadow-glow -->
@@ -148,25 +132,7 @@
 
                 <!-- Main Book Framing -->
                 <div class="relative w-full max-w-[320px] bg-white p-4.5 rounded-[2rem] border border-slate-150/70 shadow-2xl transition-all duration-500 hover:scale-[1.02]">
-                    <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology book portrait photo" class="rounded-[1.5rem] w-full h-auto object-cover shadow-inner" onerror="handleImageFallback(this, 'book')">
-                    
-                    <!-- Stats Badge 1: Minds Empowered (Floats on bottom right, with responsive layout-safe spacing) -->
-                    <div class="absolute -bottom-5 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] animate-float">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                            <p class="text-xl font-bold text-slate-900 leading-none font-serif">∞</p>
-                        </div>
-                        <p class="text-[9px] font-bold text-slate-500 uppercase tracking-wider mt-1">Minds Empowered</p>
-                    </div>
-
-                    <!-- Stats Badge 2: Research Papers (Floats on top left, safe-spaced) -->
-                    <div class="absolute -top-5 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] animate-float-delayed">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-scroll text-clinical-600 text-xs"></i>
-                            <p class="text-sm font-bold text-slate-900 leading-none">4 Papers</p>
-                        </div>
-                        <p class="text-[9px] font-bold text-slate-500 uppercase tracking-wider mt-1">Presented Globally</p>
-                    </div>
+                    <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology book cover photo" class="rounded-[1.5rem] w-full h-auto object-cover shadow-inner">
                 </div>
                 
                 <!-- Balanced Credential Labels below Book (Perfect alignment match with book container above) -->
@@ -263,6 +229,11 @@
                 <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">My Story</span>
                 <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 leading-snug">A Journey Into Understanding</h2>
                 
+                <!-- Added Bio Image here representing "Your Portrait Photo Here" -->
+                <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-slate-200 border border-slate-150 shadow-md">
+                    <img src="PHOTO-2026-05-23-09-42-47.jpg" alt="Aaliyah Meraj Hashmi - Outreach Session" class="w-full h-full object-cover">
+                </div>
+
                 <div class="p-6 bg-white rounded-2xl border border-slate-150 space-y-4 shadow-sm">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-clinical-600 text-lg">
@@ -323,7 +294,7 @@
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-clinical-600"></div>
                             <h4 class="font-bold text-slate-850 uppercase tracking-wide">M.A. — Master of Arts in Psychology</h4>
-                            <p class="text-slate-500 mt-1 leading-relaxed">
+                            <p class="text-slate-550 mt-1 leading-relaxed">
                                 Comprehensive postgraduate studies covering clinical, developmental, social, and organisational psychology. Developed strong foundations in psychological assessment, counselling methodology, and research design.
                             </p>
                         </div>
@@ -341,15 +312,15 @@
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-clinical-600"></div>
                             <h4 class="font-bold text-slate-850 uppercase tracking-wide">Intern — Clinical Internship (SCB Medical College)</h4>
-                            <p class="text-slate-500 mt-1 leading-relaxed">
+                            <p class="text-slate-550 mt-1 leading-relaxed">
                                 Worked within a structured psychiatric and psychological setting. Gained exposure to diverse clinical presentations, multidisciplinary team collaboration, patient assessment, and therapeutic support under qualified supervision.
                             </p>
                         </div>
 
-                        <!-- 2026 -->
+                        <!-- 2025 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-50 bg-indigo-500"></div>
-                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">May 2026 — Community Session with NGO Envoy</h4>
+                            <h4 class="font-bold text-slate-850 uppercase tracking-wide">May 2025 — Community Session with NGO Envoy</h4>
                             <p class="text-slate-500 mt-1 leading-relaxed">
                                 Facilitated an enriching community session on the occasion of Mother's Day, exploring the intersection of motherhood and mental health. This session created a safe space for mothers to discuss emotional fatigue, identity shifts, and self-care.
                             </p>
@@ -514,7 +485,7 @@
             <div class="mt-8 bg-white p-8 rounded-2xl border border-slate-150 shadow-xs space-y-4">
                 <div class="flex flex-wrap items-center justify-between gap-4">
                     <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Community Event</span>
-                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">May 2026 &middot; NGO Envoy &middot; Community Mental Health Outreach</span>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">May 2025 &middot; NGO Envoy &middot; Community Mental Health Outreach</span>
                 </div>
                 <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-850">Mother's Day Mental Health Session — NGO Envoy</h3>
                 <div class="text-slate-600 text-xs sm:text-sm leading-relaxed space-y-4 font-light">
@@ -549,7 +520,7 @@
             <!-- Balanced layout: Video Left Panel, Clean image grid on the right -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Video Section (Large Column Left) -->
+                <!-- Video Section (Large Column Left - No overlapping badges) -->
                 <div class="lg:col-span-4 bg-slate-50 rounded-2xl border border-slate-150 p-5 space-y-4 shadow-sm">
                     <span class="bg-indigo-50 text-clinical-600 text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase inline-block">Watch Mother's Day Session</span>
                     <h4 class="font-serif text-lg font-semibold text-slate-900 leading-snug">Community Mental Health Circle</h4>
@@ -559,81 +530,63 @@
                             <source src="VIDEO-2026-05-23-09-39-21.mp4" type="video/mp4">
                             Your browser does not support video play.
                         </video>
-                        <div class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded flex items-center gap-1.5 shadow-sm">
-                            <span class="w-1 h-1 rounded-full bg-white animate-ping"></span> Live Session Video
-                        </div>
                     </div>
                     
-                    <p class="text-xs text-slate-550 leading-relaxed font-light mt-4">
+                    <p class="text-xs text-slate-555 leading-relaxed font-light mt-4">
                         Watch the recorded session from the Mother's Day mental health event with NGO Envoy — a heartfelt, community-driven conversation on the emotional realities of motherhood, the weight of invisible labour, and how mothers can reclaim space for their own psychological well-being.
                     </p>
                 </div>
 
-                <!-- Clean, aspect locked images on the right with NO text card wrappers -->
+                <!-- Clean, aspect locked images on the right with NO text card wrappers or overlapping text overlays -->
                 <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     
                     <!-- Portrait / Speaking Photo (Photo 1) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-43-30.jpg', 'Academic Portrait: Publishing standard Health Psychology guidelines supporting National Education Policy frameworks.')">
-                        <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'book')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-43-30.jpg" alt="Health Psychology Book" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- Conference / Paper Presentation (Photo 2) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-37-21.jpg', 'Academic Encouragement: Presenting empirical psychology frameworks and career-guidance tools to adolescent participants.')">
-                        <img src="PHOTO-2026-05-23-09-37-21.jpg" alt="Academic Conference Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'adolescent')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-37-21.jpg" alt="Academic Conference Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- NGO Envoy Session (Photo 3) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-42-45.jpg', 'NGO Envoy Session: Awarding micro-financial and recognition envelopes to community mother-daughter pairs under Project Umeed.')">
-                        <img src="PHOTO-2026-05-23-09-42-45.jpg" alt="NGO Envoy Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'session')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-42-45.jpg" alt="NGO Envoy Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- SCB Internship / Clinical Work (Photo 4) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-42-47.jpg', 'Biopsychosocial Care: Direct supplement distribution to local grandmothers to support physical and emotional stability.')">
-                        <img src="PHOTO-2026-05-23-09-42-47.jpg" alt="SCB Internship / Clinical Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'elderly')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-42-47.jpg" alt="SCB Internship / Clinical Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- Workshop / Class Photo (Photo 5) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-42-46.jpg', 'Youth Guidance Distribution: Offering psychological validating resources and career guidance pathways directly to adolescent daughters.')">
-                        <img src="PHOTO-2026-05-23-09-42-46.jpg" alt="Youth Guidance Distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'adolescent')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-42-46.jpg" alt="Youth Guidance Distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- Solidarity Portrait (Photo 6) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-37-22.jpg', 'Project Umeed Team Portrait: Facilitating group solidarity along with Envoy NGO administrators and grant recipients.')">
-                        <img src="PHOTO-2026-05-23-09-37-22.jpg" alt="Support Group Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'group')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-37-22.jpg" alt="Support Group Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                     <!-- Supplementary Elder Distribution Photo (Photo 7) -->
                     <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 border border-slate-200 shadow-sm cursor-pointer hover:-translate-y-1 transition-all duration-300" 
                          onclick="openLightbox('PHOTO-2026-05-23-09-42-46 2.jpg', 'Nutritional Support Drive: Facilitating elder supplement drives with NGO Envoy to lower physiological strains.')">
-                        <!-- URL encoded strictly for space handling in file names -->
-                        <img src="PHOTO-2026-05-23-09-42-46%202.jpg" alt="Nutrition Aid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageFallback(this, 'elderly')">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-sm"></i>
-                        </div>
+                        <img src="PHOTO-2026-05-23-09-42-46 2.jpg" alt="Nutrition Aid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/5 transition-colors"></div>
                     </div>
 
                 </div>
@@ -758,7 +711,7 @@
                         </div>
                     </div>
 
-                    <!-- Cleaned Up & Simplified Social Icons Container -->
+                    <!-- Cleaned Up & Simplified Social Icons Container (LinkedIn Text Cleanly Removed) -->
                     <div class="pt-6 border-t border-slate-200/65">
                         <div class="flex gap-3">
                             <a href="#" class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm hover:bg-clinical-600 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -849,7 +802,7 @@
             </div>
             <div class="sm:text-right">
                 <p class="text-xs text-slate-600">
-                    &copy; 2026 Aaliyah Meraj Hashmi. All rights reserved.
+                    &copy; 2025 Aaliyah Meraj Hashmi. All rights reserved.
                 </p>
                 <p class="text-[10px] text-slate-700 mt-1">
                     Crafting compassionate therapeutic pathways across India.
